@@ -20,6 +20,8 @@ class CreateRevisionsTable extends Migration
             $table->integer('revisionable_id')->unsigned();
             $table->text('state');
             $table->timestamps();
+            $table->index('revisionable_id');
+            $table->index('revisionable_type');
         });
     }
 
